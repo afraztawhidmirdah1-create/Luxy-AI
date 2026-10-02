@@ -1,0 +1,82 @@
+{
+  "_note": "Copy these values into Google Play Console > Grow > Store presence > Main store listing. Replace every REPLACE_ME value.",
+  "packageName": "com.afrazstudio.luxyai",
+  "appName": "Luxy AI",
+  "developerName": "Afraz Studio",
+  "defaultLanguage": "en-US",
+  "listings": {
+    "en-US": {
+      "title": "Luxy AI",
+      "short": "AI for physics, images, comics & videos in English, Bengali, Hindi. Voice chat.",
+      "full": "Luxy AI is your smart everyday assistant, made by Afraz Studio.\n\nAsk anything in English, Bengali (বাংলা) or Hindi (हिन्दी) and get clear, detailed answers that are easy to understand.\n\nWHAT YOU CAN DO\n• Create images, comic books with pictures, and narrated videos from text\n• Talk to it with voice: choose a female or male voice\n• Sign in with Google to keep your chats backed up\n• Solve physics problems step by step with proper symbols (Δ, θ, λ, v₀, m/s²)\n• Ask questions and learn any topic in simple language\n• Create images and short narrated videos from a description\n• Talk to it and hear answers in a female or male voice\n• Sign in with Google to back up your chats\n• Get live news headlines, weather and currency rates\n• Take a photo or upload pictures and files\n• Write emails, plans, study routines and more\n• Quick tools: math, unit conversion, notes, to-do list, passwords\n• Chat history saved on your phone\n• Daily briefing with today's date, weather and headlines\n\nLuxy AI is designed to be fast, simple and useful every day. Answers can contain mistakes, so please check important information."
+    },
+    "bn-BD": {
+      "title": "Luxy AI",
+      "short": "ইংরেজি, বাংলা ও হিন্দিতে স্মার্ট AI সহকারী, লাইভ খবর ও আবহাওয়াসহ।",
+      "full": "Luxy AI আপনার প্রতিদিনের স্মার্ট সহকারী, তৈরি করেছে Afraz Studio।\n\nইংরেজি, বাংলা বা হিন্দিতে যেকোনো প্রশ্ন করুন এবং সহজ ভাষায় বিস্তারিত উত্তর পান।\n\nযা করতে পারবেন\n• প্রশ্ন করে যেকোনো বিষয় ধাপে ধাপে শিখুন\n• বর্ণনা থেকে ছবি ও ছোট ভিডিও তৈরি করুন\n• মহিলা বা পুরুষ কণ্ঠে উত্তর শুনুন\n• Google দিয়ে সাইন ইন করে চ্যাট ব্যাকআপ রাখুন\n• লাইভ খবর, আবহাওয়া ও মুদ্রার হার জানুন\n• ছবি তুলুন বা ছবি ও ফাইল আপলোড করুন\n• ইমেইল, পরিকল্পনা ও পড়ার রুটিন লিখুন\n• দ্রুত টুল: হিসাব, একক রূপান্তর, নোট, করণীয় তালিকা, পাসওয়ার্ড\n• চ্যাট হিস্টরি আপনার ফোনে সংরক্ষিত\n• আজকের তারিখ, আবহাওয়া ও শিরোনামসহ দৈনিক ব্রিফিং\n\nLuxy AI ভুল করতে পারে, তাই গুরুত্বপূর্ণ তথ্য যাচাই করুন।"
+    },
+    "hi-IN": {
+      "title": "Luxy AI",
+      "short": "अंग्रेज़ी, बांग्ला और हिन्दी में स्मार्ट AI सहायक, लाइव खबरें और मौसम के साथ।",
+      "full": "Luxy AI आपका रोज़ का स्मार्ट सहायक है, जिसे Afraz Studio ने बनाया है।\n\nअंग्रेज़ी, बांग्ला या हिन्दी में कुछ भी पूछें और आसान भाषा में विस्तार से जवाब पाएँ।\n\nआप क्या कर सकते हैं\n• सवाल पूछकर किसी भी विषय को कदम दर कदम समझें\n• विवरण से तस्वीरें और छोटे वीडियो बनाएँ\n• महिला या पुरुष आवाज़ में जवाब सुनें\n• Google से साइन इन करके चैट का बैकअप रखें\n• लाइव खबरें, मौसम और करेंसी रेट जानें\n• फोटो खींचें या तस्वीरें और फ़ाइलें अपलोड करें\n• ईमेल, योजनाएँ और पढ़ाई का रूटीन लिखवाएँ\n• तेज़ टूल: गणित, यूनिट बदलना, नोट्स, टू-डू सूची, पासवर्ड\n• चैट हिस्ट्री आपके फोन में सेव रहती है\n• आज की तारीख, मौसम और सुर्खियों के साथ दैनिक ब्रीफिंग\n\nLuxy AI से गलती हो सकती है, इसलिए ज़रूरी जानकारी जाँच लें।"
+    }
+  },
+  "category": "Productivity",
+  "tags": [
+    "AI assistant",
+    "Productivity",
+    "Education"
+  ],
+  "appType": "App",
+  "pricing": "Free",
+  "contactDetails": {
+    "email": "REPLACE_ME@example.com",
+    "website": "REPLACE_ME",
+    "phone": ""
+  },
+  "privacyPolicyUrl": "https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO/privacy-policy.html (turn on GitHub Pages for the docs folder)",
+  "graphics": {
+    "appIcon": "icon-512.png (512x512 PNG)",
+    "featureGraphic": "1024x500 image - create separately",
+    "phoneScreenshots": "2-8 screenshots, 16:9 or 9:16"
+  },
+  "androidPermissions": [
+    "android.permission.INTERNET",
+    "android.permission.CAMERA (only when taking photos)",
+    "android.permission.RECORD_AUDIO (only when using the mic button)",
+    "android.permission.ACCESS_COARSE_LOCATION (optional, for automatic weather)",
+    "android.permission.RECORD_AUDIO (only when you tap the microphone)"
+  ],
+  "dataSafetyHints": {
+    "dataStoredOnDevice": [
+      "chat history",
+      "notes",
+      "to-do list",
+      "settings"
+    ],
+    "dataSentOffDevice": [
+      "questions typed by the user are sent to third-party services to produce answers",
+      "city or approximate location when weather is requested",
+      "photos or files only when the user attaches them",
+      "image and video descriptions sent to an image generation service",
+      "name, email and profile picture if the user signs in with Google",
+      "backup saved in the user's own Google Drive app-data area",
+      "image, comic and video prompts are sent to a third-party image service",
+      "if you sign in with Google, a backup of your chats is stored in your own Google Drive app data"
+    ],
+    "dataSold": false,
+    "accountRequired": false,
+    "dataDeletion": "Users can delete chats inside the app or clear app data"
+  },
+  "contentRating": {
+    "suggestedAudience": "Everyone 13+ recommended because the app can answer open-ended questions using an AI service",
+    "containsAds": false,
+    "inAppPurchases": false,
+    "userGeneratedContentOrAI": "Yes - declare AI-generated content in the Play Console questionnaire"
+  },
+  "releaseNotes": {
+    "en-US": "First release: AI chat, live news and weather, English/Bengali/Hindi, camera and file upload, daily briefing.",
+    "bn-BD": "প্রথম সংস্করণ: AI চ্যাট, লাইভ খবর ও আবহাওয়া, ইংরেজি/বাংলা/হিন্দি, ক্যামেরা ও ফাইল আপলোড, দৈনিক ব্রিফিং।",
+    "hi-IN": "पहला संस्करण: AI चैट, लाइव खबरें और मौसम, अंग्रेज़ी/बांग्ला/हिन्दी, कैमरा और फ़ाइल अपलोड, दैनिक ब्रीफिंग।"
+  }
+}

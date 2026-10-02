@@ -1,0 +1,65 @@
+LUXY AI v2 - GUIDE (Made by Afraz Studio)  Package: com.afrazstudio.luxyai
+
+PART A - BUILD THE APP ON GITHUB (free)
+1. Create a GitHub repo and upload EVERYTHING in this zip (keep folders, including the hidden .github folder).
+2. Make your signing key once (keep it forever):
+     keytool -genkeypair -v -keystore luxy.jks -alias luxy -keyalg RSA -keysize 2048 -validity 10000
+   Use the SAME password for store and key. Then:  base64 -w0 luxy.jks
+3. Repo > Settings > Secrets and variables > Actions > add secrets:
+     KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_ALIAS (luxy)
+     GOOGLE_WEB_CLIENT_ID  (from Part B, optional until you do Part B)
+4. Repo > Actions > "Build Luxy AI for Google Play" > Run workflow.
+   Download "Luxy-AI-builds": app-debug.apk (test) and luxy-ai-release.aab (upload to Google Play).
+
+PART B - TURN ON "SIGN IN WITH GOOGLE" (one time, free)
+1. console.cloud.google.com > create a project.
+2. APIs and Services > Library > enable "Google Drive API".
+3. OAuth consent screen: app name Luxy AI, add your email. Add scopes: email, profile, .../auth/drive.appdata
+4. Credentials > Create credentials > OAuth client ID:
+     a) Type "Web application"  -> copy the Client ID. Put it in the GOOGLE_WEB_CLIENT_ID secret.
+     b) Type "Android" -> package com.afrazstudio.luxyai + SHA-1 fingerprint.
+        Create one Android client for EACH key: your upload key (keytool -list -v -keystore luxy.jks)
+        and the Play app signing key (Play Console > Test and release > App signing).
+5. Both clients must be in the same Google Cloud project. Re-run the GitHub build.
+If sign-in shows error 28444, the package name, SHA-1 or Web client ID does not match step 4.
+
+PART C - SELF-UPDATE (optional)
+The app checks once a day for a newer index.html in your repo (www/index.html on branch main).
+To release an update: edit www/index.html, raise BOTH numbers by 1: <meta name="luxy-version" content="N">,
+BV=N in the small script at the top, and APP_VER=N. Push to GitHub. Phones update by themselves.
+Safety: if an update breaks the app, the next open automatically returns to the built-in version.
+IMPORTANT: Google Play rules say apps must update through Google Play. Web content updates inside the
+app are usually allowed, but big behaviour changes can be flagged. For safety, upload a new .aab to
+Play for major changes. To turn self-update off set OTA_ENABLED=false in www/index.html.
+The daily news/weather briefing and the "Daily update URL" (config.json) are always safe to use.
+
+PART D - GOOGLE PLAY CONSOLE
+Upload luxy-ai-release.aab. Copy texts from play-store-listing.json. Privacy policy: turn on GitHub Pages
+(Settings > Pages > main > /docs), put your email in docs/privacy-policy.html, use
+https://USERNAME.github.io/REPO/privacy-policy.html
+Also needed: 1024x500 feature graphic, 2-8 screenshots, content rating, data safety, and AI-content answers.
+Because the app generates images with AI, answer the AI-generated content questions honestly.
+
+WHAT TO KNOW
+- Video = an AI slideshow of 4-5 generated pictures with captions and voice narration. It can be saved
+  as a .webm file. It is not a Sora-style motion video.
+- Female/male voice uses your phone's installed voices. Phones do not label gender, so the app picks a
+  matching voice when it can and otherwise shifts the pitch. Bengali and Hindi voices must be installed
+  in the phone's text-to-speech settings.
+- Cloud backup needs Google to give the Drive permission. If it does not, use Export/Import backup.
+- Image/video/AI answers use free third-party services that can be slow or limited at busy times.
+
+BEFORE YOU BUILD - TWO LINKS INSIDE www/index.html
+Near the top of the "Luxy v2" section, replace the two placeholders:
+  UPDATE_URL            -> https://raw.githubusercontent.com/YOUR-USER/YOUR-REPO/main/www/index.html
+                           (daily self-update: raise APP_VER and the app downloads the new version)
+  GOOGLE_WEB_CLIENT_ID  -> your Web client ID from Google Cloud Console (APIs & Services > Credentials).
+                           For the Android app also create an Android OAuth client with package
+                           com.afrazstudio.luxyai and the SHA-1 of your Play signing key, and enable the Drive API.
+Until you do, the app still works; only Google sign-in and self-update stay switched off.
+
+NEW: comics and long videos
+  /comic a brave girl and her robot, 8 pages      (up to 40 pages)
+  /video how volcanoes work, 10 minutes           (up to 30 minutes)
+Videos are narrated slideshows: AI-drawn pictures, subtitles and a female or male voice, played inside the app.
+They are not AI motion video. Keep the phone awake while one plays.
