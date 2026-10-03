@@ -1,0 +1,11 @@
+{
+  "appId": "com.afrazstudio.luxyai",
+  "appName": "Luxy AI",
+  "webDir": "www",
+  "backgroundColor": "#0d0a18",
+  "plugins": {
+    "SocialLogin": {
+      "providers": { "google": true, "facebook": false, "apple": false, "twitter": false }
+    }
+  }
+}
